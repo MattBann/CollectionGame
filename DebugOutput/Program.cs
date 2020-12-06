@@ -39,9 +39,9 @@ namespace DebugOutput
                 if (Gameboard.CheckGameOver())
                 {
                     Console.WriteLine("Game over");
-                    break;
+                    playing = false;
                 }
-                
+
             }
 
             Console.ReadLine();

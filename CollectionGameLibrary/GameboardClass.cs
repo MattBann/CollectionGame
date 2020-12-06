@@ -175,35 +175,50 @@ namespace CollectionGameLibrary
         public void AddRandomToBoard()
         {
             bool placed = false;
-            while (!placed)
+
+            if (Grid.Count != 16)
             {
-
-                Random rand = new Random();
-                int x = rand.Next(4);
-                int y = rand.Next(4);
-                int value = rand.Next(1, 3) * 2;
-
-                if (GetTileAtPos(x, y).value == 0)
+                while (!placed)
                 {
-                    Grid.Add(new Tile(x, y, value));
-                    placed = true;
-                }
 
+                    Random rand = new Random();
+                    int x = rand.Next(4);
+                    int y = rand.Next(4);
+                    int value = rand.Next(1, 3) * 2;
+
+                    if (GetTileAtPos(x, y).value == 0)
+                    {
+                        Grid.Add(new Tile(x, y, value));
+                        placed = true;
+                    }
+
+                }
             }
 
         }
 
         public bool CheckGameOver()
         {
-            if (Grid.Count == 16)
-            {
-                return true;
-            }
-            else
+            if (Grid.Count != 16)
             {
                 return false;
             }
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    if (GetTileAtPos(j+1, i).value == GetTileAtPos(j,i).value)
+                    {
+                        return false;
+                    }
+                    if (GetTileAtPos(j, i+1).value == GetTileAtPos(j, i).value)
+                    {
+                        return false;
+                    }
+                }
+            }
 
+            return true;
         }
     }
 }
