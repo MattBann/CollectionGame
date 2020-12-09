@@ -1,16 +1,21 @@
 ﻿using System;
 using CollectionGameLibrary;
+using CollectionGameInterface;
 
 namespace DebugOutput
 {
     class Program
     {
+        [STAThread]
         static void Main(string[] args)
         {
-            bool playing = true;
+            // bool playing = true;
             GameboardClass Gameboard = new GameboardClass();
 
-            while (playing)
+             var window = new MainWindow(Gameboard);
+
+
+            /*while (playing)
             {
                 Gameboard.AddRandomToBoard();
                 Gameboard.DisplayGrid();
@@ -40,11 +45,11 @@ namespace DebugOutput
                 {
                     Console.WriteLine("Game over");
                     playing = false;
-                }
+                }*/
 
-            }
+        
 
-            Console.ReadLine();
+            // Console.ReadLine();
         }
     }
 }

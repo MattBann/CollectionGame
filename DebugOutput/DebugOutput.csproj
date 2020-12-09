@@ -50,6 +50,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CollectionGameInterface\CollectionGameInterface.csproj">
+      <Project>{7ffd7f99-34bd-49a5-9cde-8327a6d41090}</Project>
+      <Name>CollectionGameInterface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CollectionGameLibrary\CollectionGameLibrary.csproj">
       <Project>{19831135-4970-48bd-980b-c7b70914749d}</Project>
       <Name>CollectionGameLibrary</Name>

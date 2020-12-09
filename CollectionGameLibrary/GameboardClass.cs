@@ -12,6 +12,7 @@ namespace CollectionGameLibrary
 
         public List<Tile> Grid = new List<Tile>();
         public int Score;
+        public bool Active;
 
         public GameboardClass()
         {
@@ -64,6 +65,7 @@ namespace CollectionGameLibrary
                     }
                 }
             }
+            Moved();
         }
 
         public void MoveDown()
@@ -95,6 +97,7 @@ namespace CollectionGameLibrary
                     }
                 }
             }
+            Moved();
         }
 
         public void MoveLeft()
@@ -126,6 +129,7 @@ namespace CollectionGameLibrary
                     }
                 }
             }
+            Moved();
         }
 
         public void MoveRight()
@@ -157,6 +161,7 @@ namespace CollectionGameLibrary
                     }
                 }
             }
+            Moved();
         }
 
         public void DisplayGrid()
@@ -220,5 +225,15 @@ namespace CollectionGameLibrary
 
             return true;
         }
+
+        public void Moved()
+        {
+            AddRandomToBoard();
+            if (CheckGameOver())
+            {
+                Active = false;
+            }
+        }
+
     }
 }
