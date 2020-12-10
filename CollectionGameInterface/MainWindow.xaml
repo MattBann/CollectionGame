@@ -21,7 +21,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
         </Grid>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="44,172,0,0" VerticalAlignment="Top" Height="68" Width="102" FontSize="30" Name="TestLabel"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="10,248,0,0" VerticalAlignment="Top" Height="68" Width="190" FontSize="30" Name="TestLabel"/>
 
     </Grid>
 </Window>

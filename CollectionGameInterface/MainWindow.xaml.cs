@@ -46,7 +46,6 @@ namespace CollectionGameInterface
 
             Gameboard = new GameboardClass();
             Gameboard.Active = true;
-            Gameboard.Grid.Add(new Tile(2,2,2048));
         }
 
         public void UpdateBoard()
@@ -54,7 +53,7 @@ namespace CollectionGameInterface
             if (!Gameboard.Active)
             {
                 //End game
-                TestLabel.Content = "Test";
+                TestLabel.Content = "Fail";
             }
 
             else
@@ -77,7 +76,7 @@ namespace CollectionGameInterface
         private void GameboardKeyDown(object sender, KeyEventArgs e)
         {
 
-            TestLabel.Content = "KeyDown";
+            TestLabel.Content = e.Key.ToString();
             switch (e.Key)
             {
 

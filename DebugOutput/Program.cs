@@ -9,13 +9,12 @@ namespace DebugOutput
         [STAThread]
         static void Main(string[] args)
         {
-            // bool playing = true;
+            bool playing = true;
             GameboardClass Gameboard = new GameboardClass();
 
-             var window = new MainWindow(Gameboard);
 
 
-            /*while (playing)
+            while (playing)
             {
                 Gameboard.AddRandomToBoard();
                 Gameboard.DisplayGrid();
@@ -45,11 +44,12 @@ namespace DebugOutput
                 {
                     Console.WriteLine("Game over");
                     playing = false;
-                }*/
+                }
 
-        
 
-            // Console.ReadLine();
+
+                Console.ReadLine();
+            }
         }
     }
 }
